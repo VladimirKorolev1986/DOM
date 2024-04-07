@@ -90,6 +90,8 @@ cats.forEach((cat, inx, cats) => {
     let div = document.createElement('div') 
     let a = document.createElement('a') 
     let p = document.createElement('p')
+    let about = document.createElement('p')
+
     a.style.fontSize = "24px";
     a.style.fontWeight = "bold";
     a.style.color = "blue";
@@ -98,10 +100,13 @@ cats.forEach((cat, inx, cats) => {
     div.style.paddingTop = '5px' 
     div.style.paddingBottom = '5px'
     div.style.textAlign = 'center'
+    
     p.textContent = `Возвраст кота ${cat.age}`
     a.textContent = html
     a.href = cat.img_link
-    div.append(a, p)
+    about.textContent = `${cat.description}`
+    console.log(about)
+    div.append(a, p, about)
     
     document.body.appendChild(div)    
 
